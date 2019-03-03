@@ -18,6 +18,12 @@ def dictionary(word)
   end
 end
 
-puts dictionary("too")
-puts dictionary("hello")
-puts dictionary("world")
+def word_substituter(tweet)
+  tweet_array = tweet.split(" ")
+  tweet_array.map do |word|
+    word = dictionary(word)
+  end
+  tweet_array.join(" ")
+end
+
+puts word_substituter("Hey guys, can anyone teach me how to be cool? I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!")
