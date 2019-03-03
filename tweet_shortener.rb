@@ -20,5 +20,3 @@ end
 
 puts dictionary("too")
 puts dictionary("hello")
-
-  
