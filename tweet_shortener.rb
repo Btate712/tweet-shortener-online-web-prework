@@ -11,9 +11,17 @@ def dictionary(word)
     "at" => "@",
     "and" => "&" }
 
+  is_cap = false
+  if word == word.capitalize
+    is_cap = true
+    word = word.downcase
+  end
   if(substitutes.include?(word))
     return substitutes[word]
   else
+    if is_cap
+      word = word.capitalize
+    end
     return word
   end
 end
@@ -32,3 +40,4 @@ def bulk_tweet_shortener(array_of_tweets)
     puts word_substituter(tweet)
   end
 end
+
