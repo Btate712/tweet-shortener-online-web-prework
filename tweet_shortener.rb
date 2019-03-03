@@ -27,4 +27,9 @@ def word_substituter(tweet)
   new_array.join(" ")
 end
 
-puts word_substituter("Hey guys, can anyone teach me how to be cool? I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!")
+def bulk_tweet_shortener(array_of_tweets)
+  array_of_tweets.each do |tweet|
+    puts word_substituter(tweet)
+  end
+end
+
