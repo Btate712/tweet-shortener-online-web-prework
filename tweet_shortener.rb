@@ -19,6 +19,6 @@ def dictionary(word)
 end
 
 puts dictionary("too")
-puts dicitonary("hello")
+puts dictionary("hello")
 
   
