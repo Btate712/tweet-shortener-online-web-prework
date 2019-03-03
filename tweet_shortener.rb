@@ -20,10 +20,11 @@ end
 
 def word_substituter(tweet)
   tweet_array = tweet.split(" ")
+  new_array = []
   tweet_array.each do |word|
-    word = dictionary(word)
+    new_array.push(dictionary(word))
   end
-  tweet_array.join(" ")
+  new_array.join(" ")
 end
 
 puts word_substituter("Hey guys, can anyone teach me how to be cool? I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!")
